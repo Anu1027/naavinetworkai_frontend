@@ -293,7 +293,13 @@ const HomePage = () => {
             {/* <div className="input-box2">
               <input type="text" placeholder="By When?" />
             </div> */}
-            <div className="createPath-btn" onClick={goToChatBot}>
+            <div
+              className="createPath-btn"
+              onClick={() => {
+                navigate("/generate");
+                setPreLoginMenu("Technology");
+              }}
+            >
               Generate
             </div>
           </div>

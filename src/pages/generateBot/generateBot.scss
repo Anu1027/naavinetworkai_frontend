@@ -1,0 +1,82 @@
+.generate-bot-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+
+  &.dark-theme {
+    background-color: #333;
+    color: #f5f5f5;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+
+    &.dark-theme {
+      background-color: #444;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .title-container {
+      display: flex;
+      align-items: center;
+      .title {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        .lightning {
+          margin-left: 0.5rem;
+          font-size: 1.8rem;
+          animation: blink 1s infinite;
+        }
+      }
+    }
+
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      .theme-label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        .theme-light,
+        .theme-dark {
+          font-size: 1.2rem;
+        }
+        .theme-light {
+          margin-right: 0.5rem;
+        }
+        .theme-dark {
+          margin-left: 0.5rem;
+        }
+      }
+      input[type="checkbox"] {
+        display: none;
+      }
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

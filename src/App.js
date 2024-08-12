@@ -20,6 +20,7 @@ import UserProfile from "./pages/UserProfile";
 import Technology from "./pages/Technology/Technology";
 import SocialDimension from "./pages/SocialDimension/socialDimension";
 import ContactUs from "./pages/contactUs/contactUs";
+import GenerateBot from "./pages/generateBot";
 // import Technology from "./pages/Technology";
 
 function App() {
@@ -42,39 +43,39 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/dashboard" element={<DashboardLoginPage />} />
       <Route
-      exact
-      path="/register"
-      element={
-        window.innerWidth > 600 ? (
-          <RegistrationHomePage />
-        ) : (
-          <DashboardLoginPage />
-        )
-      }
-    />
-    <Route
-      exact
-      path="/register/affiliate"
-      element={
-        window.innerWidth > 600 ? <FirstPage /> : <DashboardLoginPage />
-      }
-    />
-    <Route
-      exact
-      path="/register/affiliate/:id"
-      element={
-        window.innerWidth > 600 ? <FirstPage /> : <DashboardLoginPage />
-      }
-    />
-    <Route exact path="/register/pre-registered" element={<FirstPage />} />
-    <Route
-      exact
-      path="/register/pre-registered/:id"
-      element={<FirstPage />}
-    />
-    <Route exact path="/register/by-myself" element={<FirstPage />} />
-    <Route exact path="/register/by-myself/:id" element={<FirstPage />} />
-    <Route
+        exact
+        path="/register"
+        element={
+          window.innerWidth > 600 ? (
+            <RegistrationHomePage />
+          ) : (
+            <DashboardLoginPage />
+          )
+        }
+      />
+      <Route
+        exact
+        path="/register/affiliate"
+        element={
+          window.innerWidth > 600 ? <FirstPage /> : <DashboardLoginPage />
+        }
+      />
+      <Route
+        exact
+        path="/register/affiliate/:id"
+        element={
+          window.innerWidth > 600 ? <FirstPage /> : <DashboardLoginPage />
+        }
+      />
+      <Route exact path="/register/pre-registered" element={<FirstPage />} />
+      <Route
+        exact
+        path="/register/pre-registered/:id"
+        element={<FirstPage />}
+      />
+      <Route exact path="/register/by-myself" element={<FirstPage />} />
+      <Route exact path="/register/by-myself/:id" element={<FirstPage />} />
+      <Route
         path="/example"
         element={
           loginData !== null ? (
@@ -96,9 +97,7 @@ function App() {
       />
       <Route
         path="/*"
-        element={
-          loginData !== null ? <RoutePage /> : <Navigate to="/login" />
-        }
+        element={loginData !== null ? <RoutePage /> : <Navigate to="/login" />}
       />
       <Route path="/postLogin" element={<PostLoginPage />} />
       <Route path="/maps" element={<MapsPage />} />
@@ -111,8 +110,9 @@ function App() {
       <Route path="/directory/nodes/:id" element={<SingleDirectory />} />
       <Route path="/dashboard/users/:id" element={<MallProduct />} />
       <Route path="/technology" element={<Technology />} />
+      <Route path="/generate" element={<GenerateBot />} />
       <Route path="/social" element={<SocialDimension />} />
-      <Route path="/contact" element={<ContactUs/>}/>
+      <Route path="/contact" element={<ContactUs />} />
     </Routes>
   );
 }
