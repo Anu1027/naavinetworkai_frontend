@@ -59,18 +59,6 @@ const ContactUs = () => {
               Partners
             </p>
           </div>
-          <div
-            onClick={() => {
-              navigate("/technology");
-              setPreLoginMenu("Technology");
-            }}
-          >
-            <p
-              style={{ fontWeight: preLoginMenu === "Technology" ? "600" : "" }}
-            >
-              Solution
-            </p>
-          </div>
           {/* <div
             onClick={() => {
               navigate("/maps");
@@ -81,7 +69,6 @@ const ContactUs = () => {
               Paths
             </p>
           </div> */}
-
           <div
             onClick={() => {
               navigate("/social");
@@ -94,6 +81,18 @@ const ContactUs = () => {
               }}
             >
               Problem
+            </p>
+          </div>
+          <div
+            onClick={() => {
+              navigate("/technology");
+              setPreLoginMenu("Technology");
+            }}
+          >
+            <p
+              style={{ fontWeight: preLoginMenu === "Technology" ? "600" : "" }}
+            >
+              Solution
             </p>
           </div>
           <div

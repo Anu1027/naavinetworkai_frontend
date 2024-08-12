@@ -49,18 +49,6 @@ const SocialDimension = () => {
               Partners
             </p>
           </div>
-          <div
-            onClick={() => {
-              navigate("/technology");
-              setPreLoginMenu("Technology");
-            }}
-          >
-            <p
-              style={{ fontWeight: preLoginMenu === "Technology" ? "600" : "" }}
-            >
-              Solution
-            </p>
-          </div>
           {/* <div
                 onClick={() => {
                   navigate("/maps");
@@ -93,6 +81,18 @@ const SocialDimension = () => {
               }}
             >
               Problem
+            </p>
+          </div>
+          <div
+            onClick={() => {
+              navigate("/technology");
+              setPreLoginMenu("Technology");
+            }}
+          >
+            <p
+              style={{ fontWeight: preLoginMenu === "Technology" ? "600" : "" }}
+            >
+              Solution
             </p>
           </div>
           <div
