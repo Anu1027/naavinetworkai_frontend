@@ -1,16 +1,16 @@
-import React,  { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./homepage.scss";
 import { useCoinContextData } from "../../context/CoinContext";
-import { motion, useAnimation  } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 //images
 import logo from "../../static/images/logo.svg";
 import homepageImg from "../../static/images/homepageImg.jpg";
-import home1 from "../../static/images/home1.jpg"
+import home1 from "../../static/images/home1.jpg";
 import discoverIcon from "../../static/images/homepage/discoverIcon.svg";
 import refineIcon from "../../static/images/homepage/refineIcon.svg";
 import mentorIcon from "../../static/images/homepage/mentorIcon.svg";
@@ -28,7 +28,6 @@ import thub from "../../static/images/t-hub.png";
 import thubF from "../../static/images/t-hub-logo-1.png";
 import govt from "../../static/images/gov.png";
 import math from "../../static/images/math.png";
-
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -89,45 +88,48 @@ const HomePage = () => {
   const aboutNaaviContent = [
     {
       id: nextArrowicon,
-      backgroundColor: 'lightblue',
+      backgroundColor: "lightblue",
       content: [
         {
-          point: 'Naavi is a personalized path engine for education, and subsequently careers',
-          backgroundColor: 'lightblue',
-        }
-      ]
+          point:
+            "Naavi is a personalized path engine for education, and subsequently careers",
+          backgroundColor: "lightblue",
+        },
+      ],
     },
     {
       id: nextArrowicon,
-      backgroundColor: '#a4f5dd',
+      backgroundColor: "#a4f5dd",
       content: [
         {
-          point: ' It aims to guide individuals based on their passion, creating innovative and prosperous economies.',
-          backgroundColor: '#a4f5dd',
-        }
-      ]
+          point:
+            " It aims to guide individuals based on their passion, creating innovative and prosperous economies.",
+          backgroundColor: "#a4f5dd",
+        },
+      ],
     },
     {
       id: nextArrowicon,
-      backgroundColor: 'lightgreen',
+      backgroundColor: "lightgreen",
       content: [
         {
-          point: 'Naavi serves as a navigation tool, comparable to Google Maps, utilizing vast data on education related trajectories and future transformations.',
-          backgroundColor: 'lightgreen',
-        }
-      ]
+          point:
+            "Naavi serves as a navigation tool, comparable to Google Maps, utilizing vast data on education related trajectories and future transformations.",
+          backgroundColor: "lightgreen",
+        },
+      ],
     },
     {
       id: nextArrowicon,
-      backgroundColor: '#b5bcf5',
+      backgroundColor: "#b5bcf5",
       content: [
         {
-          point: ' The platform aligns individuals with their passion, guiding them to relevant educational institutions, industries, and careers.',
-          backgroundColor: '#b5bcf5',
-        }
-      ]
+          point:
+            " The platform aligns individuals with their passion, guiding them to relevant educational institutions, industries, and careers.",
+          backgroundColor: "#b5bcf5",
+        },
+      ],
     },
-
   ];
 
   const [ref, inView] = useInView({
@@ -136,21 +138,21 @@ const HomePage = () => {
 
   const controls = useAnimation();
 
-useEffect(() => {
-  if (inView) {
-    controls.start({ opacity: 1, y: 0 });
-  }
-}, [controls, inView]);
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0 });
+    }
+  }, [controls, inView]);
 
-useEffect(() => {
-  AOS.init({
-    duration: 2000
-  });
-}, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
 
-const goToChatBot = () => {
-  window.open('https://generate.naavinetwork.ai/');
-};
+  const goToChatBot = () => {
+    window.open("https://generate.naavinetwork.ai/");
+  };
 
   return (
     <div className="homepage">
@@ -173,14 +175,15 @@ const goToChatBot = () => {
                 setPreLoginMenu("About Us");
               }
             }}
-          >  
+          >
             <div>
-              <p style={{ fontWeight: preLoginMenu === "About Us" ? "600" : "" }}>
+              <p
+                style={{ fontWeight: preLoginMenu === "About Us" ? "600" : "" }}
+              >
                 About Naavi
               </p>
             </div>
           </a>
-
           <a
             href="#partners"
             onClick={(e) => {
@@ -192,24 +195,15 @@ const goToChatBot = () => {
                 setPreLoginMenu("Partners");
               }
             }}
-          >  
+          >
             <div>
-              <p style={{ fontWeight: preLoginMenu === "Partners" ? "600" : "" }}>
+              <p
+                style={{ fontWeight: preLoginMenu === "Partners" ? "600" : "" }}
+              >
                 Partners
               </p>
             </div>
           </a>
-
-          <div
-            onClick={() => {
-              navigate("/technology");
-              setPreLoginMenu("Technology");
-            }}
-          >
-            <p style={{ fontWeight: preLoginMenu === "Technology" ? "600" : "" }}>
-              Technology
-            </p>
-          </div>
           {/* <div
             onClick={() => {
               navigate("/maps");
@@ -236,18 +230,36 @@ const goToChatBot = () => {
               setPreLoginMenu("SocialDimension");
             }}
           >
-            <p style={{ fontWeight: preLoginMenu === "SocialDimension" ? "600" : "" }}>
-              Social Dimension
+            <p
+              style={{
+                fontWeight: preLoginMenu === "SocialDimension" ? "600" : "",
+              }}
+            >
+              Problem
+            </p>
+          </div>
+          <div
+            onClick={() => {
+              navigate("/technology");
+              setPreLoginMenu("Technology");
+            }}
+          >
+            <p
+              style={{ fontWeight: preLoginMenu === "Technology" ? "600" : "" }}
+            >
+              Solution
             </p>
           </div>
           <div
             onClick={() => {
               navigate("/contact");
-              setPreLoginMenu("ContactUs");  
+              setPreLoginMenu("ContactUs");
             }}
           >
-            <p style={{ fontWeight: preLoginMenu === "ContactUs" ? "600" : "" }}>
-             Contact US
+            <p
+              style={{ fontWeight: preLoginMenu === "ContactUs" ? "600" : "" }}
+            >
+              Contact us
             </p>
           </div>
         </div>
@@ -281,7 +293,10 @@ const goToChatBot = () => {
             </div> */}
             <div
               className="createPath-btn"
-              onClick={goToChatBot}
+              onClick={() => {
+                navigate("/generate");
+                setPreLoginMenu("Technology");
+              }}
             >
               Generate
             </div>
@@ -329,12 +344,43 @@ const goToChatBot = () => {
             </div> */}
             <div ref={ref} className="col-lg-6 mt-lg-5 py-3">
               {aboutNaaviContent.map((e, i) => (
-                <motion.div className="box d-flex justify-content-center py-3" key={i} animate={controls} initial={{ opacity: 0, y: 20 }} transition={{ duration: 1, delay: i * 1 }}>
-                  <div className="number fw-bold" style={{ backgroundColor: e.backgroundColor }}> <img src={e.id}/> </div>
-                  <div className="cards mb-3 h-auto p-1" style={{ border: `2px solid ${e.backgroundColor}` }}>
+                <motion.div
+                  className="box d-flex justify-content-center py-3"
+                  key={i}
+                  animate={controls}
+                  initial={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 1, delay: i * 1 }}
+                >
+                  <div
+                    className="number fw-bold"
+                    style={{ backgroundColor: e.backgroundColor }}
+                  >
+                    {" "}
+                    <img src={e.id} />{" "}
+                  </div>
+                  <div
+                    className="cards mb-3 h-auto p-1"
+                    style={{ border: `2px solid ${e.backgroundColor}` }}
+                  >
                     {e.content.map((item, index) => (
-                      <motion.div key={index} animate={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -20 }} transition={{ duration: 0.5, delay: i * 0.1 + index * 0.1 }}>
-                        <p className="card-text ps-3" style={{ backgroundColor: e.backgroundColor, borderRadius: '40px 10px 10px 40px' }}>{item.point}</p>
+                      <motion.div
+                        key={index}
+                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, x: -20 }}
+                        transition={{
+                          duration: 0.5,
+                          delay: i * 0.1 + index * 0.1,
+                        }}
+                      >
+                        <p
+                          className="card-text ps-3"
+                          style={{
+                            backgroundColor: e.backgroundColor,
+                            borderRadius: "40px 10px 10px 40px",
+                          }}
+                        >
+                          {item.point}
+                        </p>
                       </motion.div>
                     ))}
                   </div>
@@ -349,51 +395,73 @@ const goToChatBot = () => {
         </div>
 
         <div className="howItWorks container mt-5">
-            <h2>Naavi : Personalised Education Pathway</h2>
-            <div className="row pt-3">
-            <div className="col-6" >
-              <img className="w-100 h-100 rounded-5 hide-height mt-lg-3" src={worksNaavi} alt="" />
+          <h2>Naavi : Personalised Education Pathway</h2>
+          <div className="row pt-3">
+            <div className="col-6">
+              <img
+                className="w-100 h-100 rounded-5 hide-height mt-lg-3"
+                src={worksNaavi}
+                alt=""
+              />
             </div>
-              <div className="col-6 pt-lg-5" >
-                <div className="d-flex pt-4">
-                <img className="tickImage" src={tickPath} alt="" /><p className="shadow p-2 rounded bg-white">A digital, data-driven approach to study guidance, which is personalized, and unbiased</p>
-                </div>
-                <div className="d-flex pt-4">
-                <img className="tickImage" src={tickPath} alt="" /><p className="shadow p-2 rounded bg-white">Students would provide information about there goals, interest, motivations along with aspiration</p>
-                </div>
-                <div className="d-flex pt-4">
-                <img className="tickImage" src={tickPath} alt="" /><p className="shadow p-2 rounded bg-white">They are offered multiple interactive pathways comparising of macro and micro steps</p>
-                </div>
-                <div className="d-flex pt-4">
-                <img className="tickImage" src={tickPath} alt="" /><p className="shadow p-2 rounded bg-white">Each decision unlocks a new level, progressively clarifying and dynamically defining their pathway</p>
-                </div>
+            <div className="col-6 pt-lg-5">
+              <div className="d-flex pt-4">
+                <img className="tickImage" src={tickPath} alt="" />
+                <p className="shadow p-2 rounded bg-white">
+                  A digital, data-driven approach to study guidance, which is
+                  personalized, and unbiased
+                </p>
+              </div>
+              <div className="d-flex pt-4">
+                <img className="tickImage" src={tickPath} alt="" />
+                <p className="shadow p-2 rounded bg-white">
+                  Students would provide information about there goals,
+                  interest, motivations along with aspiration
+                </p>
+              </div>
+              <div className="d-flex pt-4">
+                <img className="tickImage" src={tickPath} alt="" />
+                <p className="shadow p-2 rounded bg-white">
+                  They are offered multiple interactive pathways comparising of
+                  macro and micro steps
+                </p>
+              </div>
+              <div className="d-flex pt-4">
+                <img className="tickImage" src={tickPath} alt="" />
+                <p className="shadow p-2 rounded bg-white">
+                  Each decision unlocks a new level, progressively clarifying
+                  and dynamically defining their pathway
+                </p>
               </div>
             </div>
+          </div>
         </div>
         <div className="partner container" id="partners">
-              <h2 className="fw-bold">Partners</h2>
+          <h2 className="fw-bold">Partners</h2>
+          <div className="row">
+            <div className="col-lg-4">
+              <img className="pImg" src={nvidia} alt="" />
+              <p className=" para fw-bold ml">Deep-Tech Initiative</p>
+            </div>
+            <div className="col-lg-6 mt-4">
               <div className="row">
-                <div className="col-lg-4">
-                  <img className="pImg" src={nvidia} alt="" />
-                  <p className=" para fw-bold ml">Deep-Tech Initiative</p>
-                </div>
-                <div className="col-lg-6 mt-4">
-                  <div className="row">
-                  <div className="row bg-dark">
-                          <div className="col-3">
-                            <img className="pImge1" src={thubF} alt="" />
-                          </div>
-                          <div className="col-4 mt-3">
-                            <img className="pImge" src={govt} alt="" />
-                          </div>
-                          <div className="col-4 ms-5">
-                            <img className="pImge" src={math} alt="" />
-                          </div>
-                        </div>
+                <div className="row bg-dark">
+                  <div className="col-3">
+                    <img className="pImge1" src={thubF} alt="" />
                   </div>
-                  <p className="text-center fw-bold para mt-3">AI ScaleUp Program</p>
+                  <div className="col-4 mt-3">
+                    <img className="pImge" src={govt} alt="" />
+                  </div>
+                  <div className="col-4 ms-5">
+                    <img className="pImge" src={math} alt="" />
+                  </div>
                 </div>
               </div>
+              <p className="text-center fw-bold para mt-3">
+                AI ScaleUp Program
+              </p>
+            </div>
+          </div>
         </div>
         {/* <div className="pathEngine container py-5">
           <div className="row">
@@ -434,7 +502,9 @@ const goToChatBot = () => {
           </div>
         </div> */}
         <div className="footer">
-          <p className="text-white py-4 text-center fs-medium">Copyrights © 2024 naavinetwork.ai</p>
+          <p className="text-white py-4 text-center fs-medium">
+            Copyrights © 2024 naavinetwork.ai
+          </p>
         </div>
       </div>
     </div>

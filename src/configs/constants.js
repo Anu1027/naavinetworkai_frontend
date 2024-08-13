@@ -1,46 +1,54 @@
-import bondDebuntures from './assetClasses/bondDebuntures.svg';
-import cryptoCurrencies from './assetClasses/cryptoCurrencies.svg';
-import forexCurrencies from './assetClasses/forexCurrencies.svg';
-import moneyMarkets from './assetClasses/moneyMarkets.svg';
-import sharesOffering from './assetClasses/sharesOffering.svg';
-
+import bondDebuntures from "./assetClasses/bondDebuntures.svg";
+import cryptoCurrencies from "./assetClasses/cryptoCurrencies.svg";
+import forexCurrencies from "./assetClasses/forexCurrencies.svg";
+import moneyMarkets from "./assetClasses/moneyMarkets.svg";
+import sharesOffering from "./assetClasses/sharesOffering.svg";
+import AITechImg from "./assetClasses/ai-tech.svg";
 export const ASSET_CLASSES = [
   {
-    name: 'crypto',
-    icon: cryptoCurrencies,
-    label: 'Cryprocurrency',
+    name: "homepageaiimage",
+    icon: AITechImg,
+    label: "Homepageai",
     marketOrder: 0,
     marketEnable: true,
     aboutOrder: 1,
   },
   {
-    name: 'fiat',
+    name: "crypto",
+    icon: cryptoCurrencies,
+    label: "Cryprocurrency",
+    marketOrder: 0,
+    marketEnable: true,
+    aboutOrder: 1,
+  },
+  {
+    name: "fiat",
     icon: forexCurrencies,
-    label: 'Fiat Currency',
+    label: "Fiat Currency",
     marketOrder: 6,
     marketEnable: true,
     aboutOrder: 2,
   },
   {
-    name: 'moneyMarkets',
+    name: "moneyMarkets",
     icon: moneyMarkets,
-    label: 'MoneyMarkets',
+    label: "MoneyMarkets",
     marketOrder: 2,
     marketEnable: true,
     aboutOrder: 5,
   },
   {
-    name: 'bonds',
+    name: "bonds",
     icon: bondDebuntures,
-    label: 'Bonds',
+    label: "Bonds",
     marketOrder: 3,
     marketEnable: true,
     aboutOrder: 6,
   },
   {
-    name: 'shares',
+    name: "shares",
     icon: sharesOffering,
-    label: 'Shares',
+    label: "Shares",
     marketOrder: 1,
     marketEnable: true,
     aboutOrder: 7,
@@ -85,8 +93,6 @@ export const ASSET_CLASSES = [
 //     miniLogo: eos,
 //   },
 
-  
-  
 //   {
 //     name: 'bonds',
 //     icon: bondDebuntures,
