@@ -21,4 +21,4 @@ jobs:
 
       - name: Deploy to server
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@13.56.233.227 'bash /home/ubuntu/naavinetworkai_frontend/deploy.sh'
+          ssh -o StrictHostKeyChecking=no ubuntu@54.219.212.219 'bash /home/ubuntu/naavinetworkai_frontend/deploy.sh'
