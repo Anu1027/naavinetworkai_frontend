@@ -4,7 +4,7 @@ name: Deploy React App
 on:
   push:
     branches:
-      - naavi05-09
+      - 060924
 
 jobs:
   deploy:
