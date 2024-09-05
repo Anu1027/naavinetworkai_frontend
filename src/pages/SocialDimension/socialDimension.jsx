@@ -2,13 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useCoinContextData } from "../../context/CoinContext";
 import "./socialDimension.scss";
-import { AnimatedOnScroll } from "react-animated-css-onscroll";
 
 import logo from "../../static/images/logo.svg";
 import hamIcon from "../../static/images/icons/hamIcon.svg";
-import SD from "../../static/images/SD.png";
-import pathEnginee from "../../static/images/path-engine.jpg";
-import tickPath from "../../static/images/tick.png";
+import SD from "../../static/images/SD1.png";
 
 const SocialDimension = () => {
   const navigate = useNavigate();
@@ -49,29 +46,8 @@ const SocialDimension = () => {
               Partners
             </p>
           </div>
-          {/* <div
-                onClick={() => {
-                  navigate("/maps");
-                  setPreLoginMenu("Paths");
-                }}
-              >
-                <p style={{ fontWeight: preLoginMenu === "Paths" ? "600" : "" }}>
-                  Paths
-                </p>
-              </div> */}
-          {/* <div
-                onClick={() => {
-                  // navigate("/directory/nodes");
-                  setPreLoginMenu("Partners");
-                }}
-              >
-                <p style={{ fontWeight: preLoginMenu === "Partners" ? "600" : "" }}>
-                  Partners
-                </p>
-              </div> */}
           <div
             onClick={() => {
-              // navigate("/directory/nodes");
               setPreLoginMenu("SocialDimension");
             }}
           >
@@ -123,7 +99,7 @@ const SocialDimension = () => {
       <div className="socialDimension container py-5">
         <div className="row">
           <div className="col-12">
-            <div className="">
+            {/* <div className="">
               <h5 className="py-3 w-100">
                 <span>Problem:</span> Following the Bologna process, German
                 higher education has seen increased social starification,
@@ -140,46 +116,38 @@ const SocialDimension = () => {
                 and a higher dropout risk, leading to increased chances of
                 academic failure
               </h5>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="row my-5">
           <h2>Decision Delusion Problem</h2>
           <div className="col-md-6 my-4">
-            <AnimatedOnScroll
-              animationIn="bounceInLeft"
-              duration="1000"
-              style={{
-                animationDelay: "500ms",
-                transition: "opacity 0.5s ease, transform 0.5s ease",
-              }}
-            >
+            <div className="custom-card">
               <p>
                 Due to the lack of Personalised education pathways students
                 often choose generic study option
-              </p>
+              </p>.
+            </div>
+            <div className="custom-card">
               <p>
                 Many students, who do not fit standard educational prospects,
                 fall through the cracks
               </p>
+            </div>
+            <div className="custom-card">
               <p>
                 This situation leads to disengagement, low motivation and
                 mismatched careers
               </p>
-            </AnimatedOnScroll>
+            </div>
           </div>
           <div className="col-md-6">
-            <AnimatedOnScroll
-              animationIn="bounceInRight"
-              duration="1000"
-              style={{ animationDelay: "500ms" }}
-            >
-              <img className="w-100 h-100" src={SD} alt="" />
-            </AnimatedOnScroll>
+            <img className="SD-image" src={SD} alt="" />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 export default SocialDimension;
