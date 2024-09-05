@@ -180,7 +180,7 @@ const HomePage = () => {
               <p
                 style={{ fontWeight: preLoginMenu === "About Us" ? "600" : "" }}
               >
-                Ab Naavi
+                Abt Naavi
               </p>
             </div>
           </a>
