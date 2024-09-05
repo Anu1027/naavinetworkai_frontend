@@ -200,7 +200,7 @@ const HomePage = () => {
               <p
                 style={{ fontWeight: preLoginMenu === "Partners" ? "600" : "" }}
               >
-                Partners
+                Partner
               </p>
             </div>
           </a>
