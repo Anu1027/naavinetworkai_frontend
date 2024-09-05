@@ -46,7 +46,7 @@ const ContactUs = () => {
             }}
           >
             <p style={{ fontWeight: preLoginMenu === "About Us" ? "600" : "" }}>
-              About Naavi
+              Abt Naavi
             </p>
           </div>
           <div
